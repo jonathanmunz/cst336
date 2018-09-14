@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+First Website
+and comment
+in html
+(comments can span multiple lines)
+
+-->
+
+<!-- This is the head -->
+<!-- All styles and javascript go inside the head -->
+    <head>
+        <meta charset="utf-8" />
+        <title> Jonathan Munz: Personal Portfolio </title>
+      <link href="css/styles.css" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    </head>
+<!-- closing head -->
+
+    <body>
+    <!-- This is the body -->
+    <!-- This is where we place the content of our website -->
+   
+        <header>
+            <h1> Introcution to Computer Networking </h1>
+        </header>
+        <nav>
+            
+            <a href="networkingmain.html">Home</a>
+            <a href="routing.html">Routing</a>
+            <a href="nat.html">NAT</a>
+            <a href="acls.html">ACLs</a>
+        </nav>
+        
+        <br /><br />
+        
+        <main>
+            
+            <figure id="me">
+                <img src="img/nat.png" alt="Picture of a nat" />
+            </figure>
+            
+            <div id="welcomeText">
+                NAT stands for Networking Address Translation <br />
+                <p>NAT is primarily used for converting private ip addresses to public ip addresses. </p>
+                
+                <p>So why do we need NAT?. </p>
+                
+                <p>When the internet was first being developed, the first widespread IP addressing system used was known as IPv4. This allowed for the creation of over 4 billion IP addresses. The creators of IPv4 assumed that this would be enough IP addresses to last forever, they were wrong. The internet grew and IP addresses began to run out! So what was the solution? Well ultimately it has become IPv6 which allows for enough IP addresses for every grain of sand on the earth to have one! But before that along came NAT. NAT allows for differant end devices (Computers) on differant networks to use the same IP address. How? with the use of private and public IP addresses. Instead of forcing everyone to have a unique IP address, they only need to have a unique public IP address. They can use the same private IP address as long as they are on a differant network. This extended the pool of IPv4 addresses for many years.  </p>
+                
+                <br /><br />
+                
+                           
+                
+            </div>
+            
+        </main>
+        
+        
+        
+        <!-- This is the footer -->
+        <!-- The footer goes inside the body but not always -->
+        
+        
+        
+        <footer>
+            
+            <hr>
+            
+              <figure id="me">
+                <img src="img/csumb.jpg" alt="Picture of CSUMB logo" />
+            </figure>
+            
+            <dialog open> <!-- 1st New tag-->
+
+             Internet Programming. 2018&copy; Munz <br />
+             <strong>Disclaimer:</strong> The information in this webpage is just a basic introduction to the topic. <br />
+                                                                                        All information presented is from my own personal knowledge of the subject.
+                                                                                        <br> I obtained the image on this page here: <a href= https://www.practicalnetworking.net/series/nat/why-nat/>Why NAT? </a> <br/> 
+        
+            </dialog>
+        
+        </footer>
+        <!-- closing footer -->
+        
+    </body>
+    <!-- closing body -->
+
+</html>

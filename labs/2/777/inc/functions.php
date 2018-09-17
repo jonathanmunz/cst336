@@ -48,6 +48,14 @@
             }
             echo "</div>";
         }
+        
+        function play () {
+            for ($i=1; $i<4; $i++){
+                ${"randomValue" . $i } = rand(0,2);
+                displaySymbol($)
+                
+            }
+        }
 
 
 ?>

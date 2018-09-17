@@ -6,16 +6,16 @@
     <body>
         
 <a href="./labs/1">
-    lab 1
-</a>
+    Lab 1
+</a> <br>
        
 <a href="./homework/1">
     HW 1
-</a>
+</a> <br>
       
 <a href="./labs/2">
-    lab 2
-</a>
+    Lab 2
+</a> 
 
     </body>
 </html>

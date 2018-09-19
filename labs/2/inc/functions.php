@@ -1,11 +1,13 @@
 <?php
 
+        function play() {
             for ($i=1; $i<4; $i++){
-            ${"randomValue" . $i } = rand(0,3);
-            displaySymbol(${"randomValue" . $i}, $i );
+                ${'randomValue' . $i } = rand(0,2);
+                displaySymbol(${"randomValue" . $i}, $i );
+            }
+            displayPoints($randomValue1, $randomValue2,$randomValue3);
         }
-        displayPoints($randomValue1, $randomValue2, $randomValue3);
-            
+        
         function displaySymbol($randomValue, $pos){
                 switch ($randomValue){
                     case 0: $symbol = "seven";
@@ -46,12 +48,6 @@
         }
         
         
-        function play() {
-            for ($i=1; $i<4; $i++){
-                ${'randomValue' . $i } = rand(0,2);
-                displaySymbol(${"randomValue" . $i}, $i );
-            }
-            displayPoints($randomValue1, $randomValue2,$randomValue3);
-        }
+        
 
 ?>

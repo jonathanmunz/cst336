@@ -13,7 +13,7 @@
     HW 1
 </a> <br>
       
-<a href="./labs/2/2">
+<a href="./labs/2">
     Lab 2
 </a> 
 

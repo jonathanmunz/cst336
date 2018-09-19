@@ -14,7 +14,8 @@
         <?php
         
         include 'inc/functions.php';
-        //play(); 
+        
+        play(); 
         
         ?>
         

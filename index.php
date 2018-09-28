@@ -15,11 +15,11 @@
       
 <a href="./labs/2">
     Lab 2
-</a> 
+</a> <br>
 
 <a href="lab3">
     Lab 3
-</a>
+</a> <br>
 
 <a href="./homework/2">
     HW 2

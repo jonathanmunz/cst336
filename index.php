@@ -17,7 +17,7 @@
     Lab 2
 </a> <br>
 
-<a href="lab3"> <!--Paste Mo's heroku lab3 link  -->
+<a href="https://cst336llab3.herokuapp.com/"> <!--Paste Mo's heroku lab3 link  -->
     Lab 3
 </a> <br>
 

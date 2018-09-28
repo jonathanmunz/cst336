@@ -17,7 +17,7 @@
     Lab 2
 </a> <br>
 
-<a href="lab3">
+<a href="lab3"> <!--Paste Mo's heroku lab3 link  -->
     Lab 3
 </a> <br>
 

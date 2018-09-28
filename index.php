@@ -17,5 +17,13 @@
     Lab 2
 </a> 
 
+<a href="lab3">
+    Lab 3
+</a>
+
+<a href="./homework/2">
+    HW 2
+</a> <br>
+
     </body>
 </html>

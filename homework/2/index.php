@@ -32,9 +32,9 @@ function play($arrayHand){
     
     function playerfaces() { //shows my face
         $faces = array();
-        for($i = 0; $i < 1; $i++) {
             array_push($faces, "<img src='img/player_faces/jonathan_munz.JPG'/>"); 
-        }
+            array_push($faces, "<img src='img/player_faces/thejoker.jpg'/>"); 
+        
         
         return $faces;
     }
@@ -53,12 +53,19 @@ function play($arrayHand){
     function score($totalHands) { 
         $max = abs(($totalHands[0] - 21));
         $loc = 0;
-        for($i = 0; $i < count($totalHands); $i++) {
-            if($max >= abs($totalHands[$i] - 21)) {
-                //$max = abs($totalHands[$i] - 21);
-                $loc = $i;
-            }
-            }
+        
+        if($totalHands[0]>$totalHands[1]){
+            $loc = 0;
+        }
+        elseif($totalHands[0]<$totalHands[1])
+        {
+            $loc = 1;
+        }
+        else
+        {
+            $loc = 2; 
+        }
+            
            
         switch($loc) {
             case 0:

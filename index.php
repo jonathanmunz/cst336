@@ -21,7 +21,7 @@
     Lab 3
 </a> <br>
 
-<a href="./homework/2">
+<a href="./homework/2/index.php">
     HW 2
 </a> <br>
 

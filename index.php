@@ -25,5 +25,9 @@
     HW 2
 </a> <br>
 
+<a href="./labs/4">
+    Lab 4
+</a> <br>
+
     </body>
 </html>

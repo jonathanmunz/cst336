@@ -12,7 +12,7 @@ Application for Employment
 
 </div>
 
-<form action="action_page.php" method=post>
+<form method="post" action="action_page.php">
   Position You Are Applying For:
     <input type="text" name="lastname">
     Desired Salary:
@@ -161,7 +161,10 @@ Signiture of applicant: <input type="text" name ="Signiture of applicant" value 
 Date: <input type="text" name ="Date" value "Date" >
 </form>
 
-<input type="Submit"> </input> <br>
+<form action="action_page.php">
+<input type="submit" value="Submit"> <br>
+</form>
+
 	<footer>
 		
 	</footer>

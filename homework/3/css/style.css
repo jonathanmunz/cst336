@@ -1,0 +1,92 @@
+
+body{
+     font-family: Verdana, Arial, Times New Roman;
+  
+}
+span {  /*Borders */
+    size: 8em;
+    text-align: center;
+    background: pink;
+    position: relative;
+    top: -50;
+    left: 10;
+    border-radius: 3px;
+}
+
+root { /*No Idea */
+    
+    display: block;
+    
+}
+
+body{ /*Background */
+    background: white;
+}
+
+#title{ /*Title */
+    padding-top:75px;
+    font-size: 2em;
+    border-width:4px;
+    background: #fff;
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+
+#wrapper{
+    width: 600px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 7px;
+    background: #00ff00; /*Inside border color */
+    text-align: left;
+    
+}
+
+legend {
+    padding: 15px;
+    border: 1px solid black;
+    padding: 3px;
+    background: #000;
+    color: white;
+    
+}
+
+#EmployStyle{ /*Style for Employment */
+    text-align: left;
+}
+
+#EducationStyle{ /*Style for Education */
+    text-align: left;
+}
+
+#RefStyle{ /*Style for Education */
+    text-align: left;
+}
+
+#AckStyle{ /*Style for Education */
+    text-align: left;
+}
+
+#PIStyle{ /*Style for Education */
+    text-align: left;
+}
+
+#button{
+    color: black;
+    background: #a83fa8;
+    padding: 3px;
+    border-radius: 2 px;
+    color: yellow;
+}
+
+#symbolStyle{
+            font-Size: 6em;
+}
+
+img { /*Borders */
+    padding: 5px;
+    background: silver ;
+    margin: 7px;
+}

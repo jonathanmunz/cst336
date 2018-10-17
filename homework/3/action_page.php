@@ -1,171 +1,59 @@
-<DOCTYPE! HTML>
-<html>
-<head>
-<title>Application for Emplyment</title>
+Please review your information below: <br> <br>
 
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-  
-<div id="title">  
-Application for Employment
+<?php
 
-</div>
+echo "Position: ".$_POST['position1'] . "<br>";
+echo "Salary: ".$_POST['salary'] . "<br>";
+echo "Start Date: ".$_POST['startdate'] . "<br>";
 
-<form>
-  Position You Are Applying For:
-    <input type="text" name="lastname">
-    Desired Salary:
-    <input type="text" name="firstname">
-    Date Available for Work:
-    <input type="text" name="firstname"> <br> <br>
-    
-  <fieldset>
-   <div id "PIStyle"> <br>
-    <legend>Personal Information</legend> <br>
-    Last name:
-    <input type="text" name="lastname">
-    First name:
-    <input type="text" name="firstname">
-    Middle:
-    <input type="text" name="middle"><br><br>
-    </div>
-</form>
+echo "Last Name: ".$_POST['lastname'] . "<br>";
+echo "First Name: ".$_POST['firstname'] . "<br>";
+echo "Middle Name: ".$_POST['middlename'] . "<br>";
 
+echo "Address: ".$_POST['address'] . "<br>";
+echo "City: ".$_POST['city'] . "<br>";
+echo "State: ".$_POST['state'] . "<br>";
+echo "Zip: ".$_POST['zip'] . "<br>";
 
-<form>
-    
-    Address:    
-    <input type="text" name="address">
-    City:
-    <input type="text" name="city">
-    State:
-    <input type="text" name="state">
-    Zip:
-    <input type="text" name="zip">
-  
-</form>
+echo "Home Phone: ".$_POST['homephone'] . "<br>";
+echo "Cell Phone: ".$_POST['cellphone'] . "<br>";
+echo "Email Address: ".$_POST['email'] . "<br>";
+echo "Social Security Number: ".$_POST['SSN'] . "<br>";
 
-<form>
-    
- 
-     Home Phone: <input type="text" name="Home Phone">
-     Cell Phone:  <input type="text" name="Cell Phone">
-     Email Address:  <input type="text" name="Email Address"><br><br>
-     Social Security Number: <input type="text" name="Home Phone"><br>
-  
-</form>
+echo "US Citizen: ".$_POST['citizen'] . "<br>";
+echo "Felony Convition: ".$_POST['felony'] . "<br>";
+echo "Drug Screening: ".$_POST['drug'] . "<br>";
 
+echo "School Name: ".$_POST['schoolname'] . "<br>";
+echo "Location: ".$_POST['location'] . "<br>";
+echo "Years Attended: ".$_POST['yearsattended'] . "<br>";
+echo "Degree Received: ".$_POST['degree'] . "<br>";
+echo "Major: ".$_POST['major'] . "<br>";
 
-<form>
-    US Citizen? <br>
-      
-      <input type="radio" name="US Citizen?" value="Yes"> Yes<br>
-      <input type="radio" name="US Citizen?" value="No"> No<br><br>
-      
-</form>
+echo "Employer: ".$_POST['employer'] . "<br>";
+echo "Dates Employed: ".$_POST['dateemp'] . "<br>";
+echo "Work Phone: ".$_POST['workphoneemp'] . "<br>";
+echo "Pay Rate: ".$_POST['payrateemp'] . "<br>";
+echo "Address: ".$_POST['addressemp'] . "<br>";
+echo "City: ".$_POST['cityemp'] . "<br>";
+echo "Position: ".$_POST['positionemp'] . "<br>";
+echo "Duties Performed: ".$_POST['dutiesemp'] . "<br>";
+echo "Supervisor Name & Title: ".$_POST['supervisoremp'] . "<br>";
+echo "Reason for Leaving: ".$_POST['reasonemp'] . "<br>";
+echo "May we contact them?: ".$_POST['contactemp'] . "<br>";
 
-<form>
-    Have you ever been convicted of a felony?<br>
-      
-      <input type="radio" name="Have you ever been convicted of a felony?" value="Yes"> Yes<br>
-      <input type="radio" name="Have you ever been convicted of a felony?" value="No"> No<br><br>
-      
-</form>
+echo "Name: ".$_POST['nameref'] . "<br>";
+echo "Title: ".$_POST['titleref'] . "<br>";
+echo "Company: ".$_POST['companyref'] . "<br>";
+echo "Phone: ".$_POST['phoneref'] . "<br>";
+echo "Acknowledgement 1: ".$_POST['ack1'] . "<br>";
+echo "Acknowledgement 2: ".$_POST['ack2'] . "<br>";
+echo "Acknowledgement 3: ".$_POST['ack3'] . "<br>";
+echo "Signiture of Applicant: ".$_POST['sig'] . "<br>";
+echo "Date: ".$_POST['date'] . "<br>";
 
-<form>
-    If selected for employment are you willing to submit to a pre-employment drug screening test?<br>
-      
-      <input type="radio" name="If selected for employment are you willing to submit to a pre-employment drug screening test?" value="Yes"> Yes<br>
-      <input type="radio" name="If selected for employment are you willing to submit to a pre-employment drug screening test?" value="No"> No<br><br>
-      </fieldset>
-</form>
+?>
 
-<form>
-    
-    <fieldset> 
-
-    <div id="EducationStyle"> 
-    <legend>Education</legend> <br>
-      <div>
-      School Name:                                 
-      <input type="text" name="School Name" value= > <br>  
-      </div>
-      Location: 
-      <input type="text" name="Location"  value= > <br>
-      
-      Years Attended:  
-      <input type="text" name="Years Attended" value= > <br>
-      
-      Degree Received: 
-      <input type="text" name="Degree Received" value= > <br>
-      
-      Major: 
-      <input type="text" name="Major" value= > <br>
-     </div>
-    
-      </fieldset>
-      
-</form>
-
-<form>
-    <fieldset>
-    <div id = "EmployStyle"> 
-    <legend>Employment</legend> <br>
-      Employer: <input type="text" name="Employer" value= > <br> 
-      Dates Employed: <input type="text" name="Dates Employed" value= > <br>
-      Work Phone: <input type= "text" name="Work Phone" align="right" value= > <br>
-      Pay Rate: <input type="text" name="Pay Rate" value= > <br>
-      Address: <input type="text" name="Address" value= > <br>
-      City: <input type="text" name="City" value= > <br>
-      Position: <input type="text" name="Position" value= > <br>
-      Duties Performed: <input type="text" name="Duties Performed" value= > <br>
-      Supervisors Name and Title: <input type="text" name="Supervisors Name and Title" value= > <br>
-      Reason for leaving: <input type="text" name="Reason for leaving" value= > <br>
-      May we contact them? :
-      <input type="checkbox" name="May we contact them?" value="Yes"> Yes
-      <input type="checkbox" name="May we contact them?" value="No"> No
-     </div>  
-      </fieldset>
-</form>
-
-<form>
-    
-    <fieldset>
-    <div id= RefStyle> 
-    <legend>References</legend> <br>
-      Name: <input type="text" name="Education" value= > <br>
-      Title: <input type="text" name="Education" value= > <br>
-      Company: <input type="text" name="Education" value= > <br>
-      Phone: <input type="text" name="Education" value= > <br>
-    </div>
-      </fieldset>
-      
-</form>
-
-<form>
-    <fieldset>
-    <div id= AckStyle> 
-    <legend>Acknowledgement and Authorization </legend> <br>
-      <input type="Checkbox" name="Education" value= >I certify that all answers given herein are true and complete to the best of my knowledge. <br>
-      <input type="Checkbox" name="Education" value= >I authorize investigation of all statements contained in this application for employment as may be necessary in arriving at
-an employment decision. <br>
-      <input type="Checkbox" name="Education" value= >In the event of employment, I understand that false or misleading information given in my application or interview(s) may
-result in discharge. <br>
-    </div>
-      </fieldset>
-</form>
-
-<form>
-Signiture of applicant: <input type="text" name ="Signiture of applicant" value "Signiture of applicant" >
-Date: <input type="text" name ="Date" value "Date" >
-</form>
-<form action="index.php">
-<input type="submit" value="Submit"> <br>
-</form>
-
-	<footer>
-		
-	</footer>
-</body>
-</html>
+<form action="thankyou.php">;
+<input type="submit" value="Confirm"> <br>;
+</form>;

@@ -2,7 +2,7 @@
     include 'functions.php';
     
     //Start the session in any php file where you will be using sessions
-    session_start; 
+    session_start(); 
     
     //Create an array in the Session to hold our cart items
     if (!isset($_SESSION['cart'])) {

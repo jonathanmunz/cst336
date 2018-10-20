@@ -33,6 +33,10 @@
     Lab 5
 </a> <br>
 
+<a href="./labs/meme_lab">
+    meme_lab
+</a> <br>
+
 <a href="./homework/3/index.php">
     HW 3
 </a> <br>

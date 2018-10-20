@@ -1,18 +1,19 @@
 <?php
 $maxDays = 0;
-if($Month == January) {
+
+if($Month == "January") {
   $maxDays = 31;
 }
-else if($Month == February) {
+else if($Month == "February") {
   $maxDays = 28;
 }
-else if($Month == November) {
+else if($Month == "November") {
   $maxDays = 30;
 }
-else if ($Month == December) {
+else if ($Month == "December") {
   $maxDays = 31;
 }
-
+print_r($_POST); 
 
 
 ?>

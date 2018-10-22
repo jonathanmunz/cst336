@@ -33,7 +33,7 @@
     Lab 5
 </a> <br>
 
-<a href="./labs/meme_lab/welcome.php">
+<a href="./labs/6/welcome.php">
     meme_lab
 </a> <br>
 

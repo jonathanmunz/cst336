@@ -34,7 +34,7 @@
 </a> <br>
 
 <a href="./labs/6/welcome.php">
-    meme_lab
+    Lab 6
 </a> <br>
 
 <a href="./homework/3/index.php">

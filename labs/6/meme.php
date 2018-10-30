@@ -96,6 +96,19 @@ if (isset($_POST['line1']) && isset($_POST['line2'])) {
   $memeObj = createMeme($_POST['line1'], $_POST['line2'], $_POST['meme-type']); 
 }
 
+if(isset($_POST['search'])) {
+  // query the databse for any records that match this search
+  
+  $dbConn = getDatabaseConnection(); 
+  $sql = "SELECT * from all_memes WHERE line1 = '{$_POST['search']}'";
+  
+  $statement = $dbConn->prepare($sql); 
+  
+  $statement->execute(); 
+  $records = $statement->fetchAll(); 
+}
+
+
 
 
 ?>

@@ -53,7 +53,7 @@
     HW 4
 </a> <br>
 
-<a href="./proseminar/eportfolio">
+<a href="./proseminar/eportfolio/aboutme.html">
     Major Proseminar Eportfolio 
 </a> <br>
 

@@ -1,65 +1,73 @@
 <?php
 
-
+//creates a function called setup
 function setup(){ 
     
-    $arraySuit = array(); 
-    $arraySuit = array("clubs","diamonds", "hearts", "spades");
+    $arraySuit = array(); //create an empty array called arraysuit
+    $arraySuit = array("clubs","diamonds", "hearts", "spades"); //add suits to arraysuit
     
-    $arrayHand = array();
+    $arrayHand = array(); //create empty array arrayhand
+    
 //deals all players 5 cards    
     while(count($arrayHand) < 5){
         $card = rand(1,13); //selects random cards
-        if(!in_array($card, $arrayHand)){
-            $arrayHand[] = $card;
+        if(!in_array($card, $arrayHand)){ //in_array is a true or false, checks to see if variable card within array arrayhand, checks to see if the card is not in the hand. Makes sure there is no duplicates
+            $arrayHand[] = $card; //if it's not, put 5 random cards in hand
         }
     }
     // display Hand
-    foreach($arrayHand as $card){
-        $suit = array_rand($arraySuit);
-        $displaySuit = $arraySuit[$suit];
-       echo "<img src='./img/cards/$displaySuit/$card.png'/>";
+    foreach($arrayHand as $card){ //loops through array, each index in the array is a card
+        $suit = array_rand($arraySuit); //creates variable suite which is equal to a random index in array suit
+        $displaySuit = $arraySuit[$suit]; //creates variable display suite which displays the random suite chosen.
+       echo "<img src='./img/cards/$displaySuit/$card.png'/>"; //prints the card chosen
     }
-    return $arrayHand;
+    return $arrayHand; //returns hand
 }
+// creates function play which takes hand as a variable
 function play($arrayHand){  
     
-    return array_sum($arrayHand);
+    return array_sum($arrayHand); //returns the sum of all the values in arrayHand
 }
 
+$randomPlayerPicture = array('batman', 'lexluthor', 'superman', 'thejoker');
+shuffle($randomPlayerPicture);
+
 	//include 'lab3/functions.php';
-    static $totalHand = array();
+    static $totalHand = array(); //makes total hand accessable without calling the play function, permission thing 
+    
     function playerfaces() { //shows the players faces
-        $faces = array();
-        for($i = 0; $i < 4; $i++) {
-            array_push($faces, "<img src='img/player_faces/batman.jpg'/>"); //$i.jpg Display random faces
+        $faces = array(); //creates an empty array called faces
+        for($i = 0; $i < 4; $i++) { // loops through file and pushes random faces into faces array
+        $name = array_pop($randomPlayerPicture);
+            array_push($faces, "<img src='img/player_faces/$name.jpg'/>"); //$i.jpg Display random faces, currently only displaying batman
         }
         
-        return $faces;
+        return $faces; //returns faces array
     }
     
-    function total($hand) { 
-        global $totalHand;
-        $totalHand[] = $hand;
+    function total($hand) { //create function total which takes one input of hand
+        global $totalHand; //calls global variable total hand
+        $totalHand[] = $hand; //set array total hand equal to hand
         
     }
     
-    function fetchHand() { 
-        global $totalHand;
-        return $totalHand;
+    function fetchHand() { //create function fetchhand
+        global $totalHand; //calls global variable total hand
+        return $totalHand; //return it
     }
     
-    function score($totalHands) { 
-        $max = abs(($totalHands[0] - 42));
+    function score($totalHands) { //create function score which takes the number total hand
+        $max = abs(($totalHands[0] - 42)); //sets the maximum to not exceed 42
+        global $loc; //declare variable $loc and set it equal to zero
         $loc = 0;
-        for($i = 0; $i < count($totalHands); $i++) {
-            if($max >= abs($totalHands[$i] - 42)) {
-                $max = abs($totalHands[$i] - 42);
-                $loc = $i;
+        for($i = 0; $i < count($totalHands); $i++) { //loops through from zero to total
+            if($max >= abs($totalHands[$i] - 42)) { //if 
+                $max = abs($totalHands[$i] - 42);//set max equal to the absolute value of 
+                $loc = $i; //set variable loc to i which keeps track of each players number
             }
         }
         
-        switch($loc) {
+        switch($loc) { //switch statement to choose winner
             case 0:
                 return "Player 1";
                 break;
@@ -88,9 +96,9 @@ function play($arrayHand){
 	<h1 id="title">Marvel Jack!</h1>
 
 	<?php
-        $picArray = playerfaces();
+        $picArray = playerfaces(); //declare variable pic array which is equal to the function playerfaces() which creates 4 random players
        
-        for($i = 0; $i < 4; $i++) {
+        for($i = 0; $i < 4; $i++) { //loops through 4 times, (plays game for each player)
             echo $picArray[$i]; // display pictures
             $hand = setup(); // create players hand 
             $sum = play($hand); // get hand total

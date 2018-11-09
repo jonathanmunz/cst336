@@ -1,6 +1,7 @@
 <?php
 $maxDays = 0;
 
+//Set number of days depends on month, Imcomplete
 if($Month == "January") {
   $maxDays = 31;
 }

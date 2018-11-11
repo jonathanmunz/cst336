@@ -18,13 +18,13 @@ function searchForMemes($userID = '', $order = '') {
     global $dbConn; 
     //hardcoded sql statement
     $sql = "SELECT 
-        all_memes.id,
-        all_memes.line1, 
-        all_memes.line2, 
-        all_memes.create_date,
+        all_memesv2.id,
+        all_memesv2.line1, 
+        all_memesv2.line2, 
+        all_memesv2.create_date,
         categories.meme_url 
-      FROM all_memes INNER JOIN categories 
-      ON all_memes.category_id = categories.category_id 
+      FROM all_memesv2 INNER JOIN categories 
+      ON all_memesv2.category_id = categories.category_id 
       WHERE 1"; 
       //changes the sql statement based on different conditions
     if (!empty($userID)) {
@@ -70,11 +70,11 @@ function displayMemes($records, $editable = false) {
        echo  '<div class="meme-div" style="background-image:url('. $memeURL .')">'; 
        echo  '<h2 class="line1">' . $record["line1"] . '</h2>'; 
        echo  '<h2 class="line2">' . $record["line2"] . '</h2>'; 
-       echo  '</div>'; 
        
        if ($editable) {
         echo '<div class="edit-menu">'; 
         echo '<a href="edit.php?id='. $record['id'].'">Edit</a>'; 
+        echo ' <a href="delete.php?id='. $record['id'].'">Delete</a>'; 
         echo '</div>'; 
       }
       echo '</div>';
@@ -99,18 +99,18 @@ function getCategoryID($memeType) {
   $records = $statement->fetchAll(); 
   $categoryID = $records[0]['category_id']; 
   
-  echo "categoryID: $categoryID <br/>"; 
+  //echo "categoryID: $categoryID <br/>"; 
   return $categoryID; 
 }
 
 
 
-// INSERT the new meme into the all_memes table
+// INSERT the new meme into the all_memesv2 table
 //Utsab doesn't have user_id
 function insertMeme($line1, $line2, $categoryID) {
     global $dbConn; 
     
-    $sql = "INSERT INTO `all_memes` 
+    $sql = "INSERT INTO `all_memesv2` 
       (`id`, `line1`, `line2`, `category_id`, `create_date`, `user_id`) 
       VALUES 
       (NULL, '$line1', '$line2', '$categoryID', NOW(), '{$_SESSION['user_id']}');"; 
@@ -131,15 +131,14 @@ function fetchMemeFromDB($memeID) {
     
   
   $sql = "SELECT 
-      all_memes.id,
-      all_memes.line1, 
-      all_memes.line2, 
+      all_memesv2.id,
+      all_memesv2.line1, 
+      all_memesv2.line2, 
       categories.meme_url, 
       categories.meme_type
-      
-    FROM all_memes INNER JOIN categories 
-    ON all_memes.category_id = categories.category_id 
-    WHERE all_memes.id = $memeID"; 
+    FROM all_memesv2 INNER JOIN categories 
+    ON all_memesv2.category_id = categories.category_id 
+    WHERE all_memesv2.id = $memeID"; 
   
   
   $statement = $dbConn->prepare($sql); 
@@ -159,7 +158,7 @@ function createMeme($line1, $line2, $memeType) {
     $categoryID = getCategoryID($memeType); 
     
     //Step 2: Insert the meme information (along with the category ID) into the
-    // all_memes table
+    // all_memesv2 table
     $result = insertMeme($line1, $line2, $categoryID); 
 
     //Step 3: Fetch the new meme joined with the meme_url information
@@ -169,6 +168,48 @@ function createMeme($line1, $line2, $memeType) {
 
 
 }
+
+function editMeme($id, $line1, $line2, $memeType) {
+  global $dbConn; 
+  
+  
+  //Step 1: Get the category ID for the selected meme type
+  $categoryID = getCategoryID($memeType); 
+  
+  
+  //Step 2: Update the meme record in the all_memesv2 table
+
+  $sql = "UPDATE `all_memesv2` 
+            SET 
+              line1 = :line1, 
+              line2 = :line2, 
+              category_id = :category_id
+            WHERE 
+              id = :id"; 
+
+  
+  $statement = $dbConn->prepare($sql); 
+  $statement->execute(array(
+      ':line1' => $line1, 
+      ':line2' => $line2, 
+      ':category_id' => $categoryID, 
+      ':id' => $id
+      ));
+  
+}
+
+function deleteMemeFromDB($memeID) {
+  global $dbConn; 
+  
+  $sql = "DELETE  
+    FROM all_memesv2  
+    WHERE all_memesv2.id = $memeID"; 
+  $statement = $dbConn->prepare($sql); 
+  $statement->execute(); 
+}
+ 
+
+
 
 
 

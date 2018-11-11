@@ -33,7 +33,7 @@
     Lab 7
 </a> <br>
 
-<a href="./labs/8/index.php">
+<a href="./labs/8/index.html">
     Lab 8
 </a> <br>
 

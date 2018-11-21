@@ -49,7 +49,7 @@
     HW 3
 </a> <br>
 
-<a href="./homework/4/index.php">
+<a href="./homework/4/index.html">
     HW 4
 </a> <br>
 

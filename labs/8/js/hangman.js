@@ -4,8 +4,31 @@ var selectedHint = "";
 var board = [];
 var remainingGuesses = 6;
 var words = [{ word: "snake", hint: "It's a reptile" }, 
+             { word: "lizard", hint: "It's a reptile" }, 
+             { word: "alligator", hint: "It's a reptile" }, 
+             { word: "crocodile", hint: "It's a reptile" }, 
+             { word: "snake", hint: "It's a reptile" }, 
+             { word: "turtle", hint: "It's a reptile" }, 
              { word: "monkey", hint: "It's a mamal" }, 
-             { word: "beetle", hint: "It's an insect" }];
+             { word: "anteater", hint: "It's a mamal" }, 
+             { word: "armadillo", hint: "It's a mamal" }, 
+             { word: "sloth", hint: "It's a mamal" }, 
+             { word: "leopard", hint: "It's a mamal" }, 
+             { word: "tiger", hint: "It's a mamal" }, 
+             { word: "bear", hint: "It's a mamal" }, 
+             { word: "salamander", hint: "It's an amphibian" },
+             { word: "frog", hint: "It's an amphibian" },
+             { word: "toad", hint: "It's an amphibian" },
+             { word: "newt", hint: "It's an amphibian" },
+             { word: "beetle", hint: "It's an insect" },
+             { word: "bee", hint: "It's an insect" },
+             { word: "ant", hint: "It's an insect" },
+             { word: "butterfly", hint: "It's an insect" },
+             { word: "penguin", hint: "It's a bird" },
+             { word: "parrot", hint: "It's a bird" },
+             { word: "hummingbird", hint: "It's a bird" },
+             { word: "owl", hint: "It's a bird" },
+             { word: "penguin", hint: "It's a bird" }];
 
 
 

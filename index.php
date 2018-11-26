@@ -37,6 +37,10 @@
     Lab 8
 </a> <br>
 
+<a href="./labs/9/ajaxsignup.php">
+    Lab 9
+</a> <br>
+
 <a href="./homework/1">
     HW 1
 </a> <br>

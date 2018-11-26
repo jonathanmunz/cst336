@@ -1,0 +1,33 @@
+body{ 
+    background: white;
+}
+
+#title{ 
+    border-width:4px;
+    background: blue;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    font-size: 1em;
+    font-family: Verdana;
+}
+
+#main{ 
+    width: 600px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 7px;
+    background: black; 
+    font-Size: 1em;
+    text-align: left;
+    position: relative;
+    color: blue;
+}
+
+#button{ 
+    color: black;
+    background: blue;
+    padding: 3px;
+}
+

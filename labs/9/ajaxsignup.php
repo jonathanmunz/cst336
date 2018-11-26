@@ -15,9 +15,10 @@ if(isset($_POST) ){
 <html>
 
 <head>
-
+   
    <title>Ajax Signup </title>
-
+   
+   <link rel="stylesheet" type="text/css" href="css/style.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
@@ -25,13 +26,13 @@ if(isset($_POST) ){
 <body>
 
     <header>
-
+      <div id="title">
       <h1>Ajax Signup</h1>
-
+      </div>
     </header>
 
 
-
+      <div id="main">
       <form method="post" action="ajaxsignup.php">
 
         Username:   <input type="text" name="username" id="username"> <br>
@@ -41,6 +42,7 @@ if(isset($_POST) ){
         Password:     <input type="password" name="password" id="password"> <br><br>
         
         Retype Password:     <input type="password" name="retypepassword" id="retypepassword"> <br><br>
+        
         <?php
         if($passwordsmatch){
         echo "Passwords match!";
@@ -52,7 +54,7 @@ if(isset($_POST) ){
         }
         ?>
         State: <input type="text" name="state" id="state"> <br><br> 
-        <div id="stateValidation"> </div>  <br><br />
+        <div id="stateValidation"> </div>  
         
         Zip Code: <input type="text" name="zip" id="zip"> <br><br>
         <div id="zipValidation"> </div>  <br><br />
@@ -60,11 +62,11 @@ if(isset($_POST) ){
         County: <select id="county">
           <option value="">SELECT</option>
         </select> <br><br>
-        
+        <div id = "button">
         <input type="submit" value="Submit">
-
+        </div>
       </form>
-
+      </div>
        <br><br>
 
 

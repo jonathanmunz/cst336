@@ -41,6 +41,10 @@
     Lab 9
 </a> <br>
 
+<a href="./labs/10/index.php">
+    Lab 10
+</a> <br>
+
 <a href="./homework/1">
     HW 1
 </a> <br>

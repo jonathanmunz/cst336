@@ -1,0 +1,21 @@
+#holidayshopping {
+    margin: auto;
+    background-color: lightgrey;
+    padding: 1px; 
+    text-align: center;
+}
+
+#mainBody{
+    margin: auto;
+    text-align: center;
+}
+
+#tableStyle {
+    border: 1px solid;
+    margin: auto;
+    text-align: center;
+}
+
+td {
+    border: 1px solid;
+}

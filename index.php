@@ -61,6 +61,10 @@
     HW 4
 </a> <br>
 
+<a href="./projects/Final/home.php">
+    Final Project
+</a> <br>
+
 <a href="./proseminar/eportfolio/aboutme.html">
     Major Proseminar Eportfolio 
 </a> <br>

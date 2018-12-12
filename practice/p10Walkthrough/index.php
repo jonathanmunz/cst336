@@ -3,7 +3,11 @@ session_start();
 
 function displayQuiz(){
     //displays Quiz if session is active
-
+    if(isset($_SESSION['username'])){
+        include 'quiz.php';
+    } else {
+        header("Location: login.php");
+    }
 }
 ?>
 
@@ -24,7 +28,16 @@ function displayQuiz(){
         <div class="content-wrapper">
             <!--Display Quiz Content-->
             <div id="quiz">
-            
+                <h1>Quiz</h1>
+                <?=displayQuiz()?>
+                
+                <div id="Feedback">
+                    <h2>Your final score is <span id="score"> score </span> </h2>
+                    
+                    You've taken this quiz <strong id ="times"></strong> time(s). <br /><br />
+                    
+                    Your average score was <strong id ="average"></strong>
+                </div>
             </div>
             <div id="mascot">
                 <img src="img/mascot.png" alt="CSUMB Mascot" width="350" />

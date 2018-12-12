@@ -61,8 +61,7 @@
     HW 4
 </a> <br>
 
-<a href="cst336-final/home.php">
-    Final Project
+<a href="https://cst336-final2018.herokuapp.com/ Project
 </a> <br>
 
 <a href="./proseminar/eportfolio/aboutme.html">

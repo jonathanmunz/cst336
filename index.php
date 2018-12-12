@@ -61,7 +61,7 @@
     HW 4
 </a> <br>
 
-<a href="./projects/Final/home.php">
+<a href="./cst336-final/home.php">
     Final Project
 </a> <br>
 

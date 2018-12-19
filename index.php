@@ -69,6 +69,10 @@
     Practice Final
 </a> <br>
 
+<a href="./exams/Final/index.html">
+    Final Exam
+</a> <br>
+
 <a href="./proseminar/eportfolio/aboutme.html">
     Major Proseminar Eportfolio 
 </a> <br>

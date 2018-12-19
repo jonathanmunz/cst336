@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <!--ajax is used to retrieve data from somewhere without leaving the web page-->
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () { //not sure, something about running this first?
+                
+               $("input").keyup(function() {
+                   var name = $("input").val();
+                   $.post("suggestions.php", {
+                       suggestion: name
+                   }, function(data, status) { 
+                        $("#test").html(data);
+                   
+                   }); 
+               }); 
+            });
+        </script>
+    </head>
+    
+    <body>
+        <input type="text" name="name"> 
+        <p id="test"></p> <!--The ID test is in the ajax function. When pressed this performs the ajax function/ -->
+    </body>
+    
+</html>

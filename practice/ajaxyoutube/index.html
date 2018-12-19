@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <!--ajax is used to retrieve data from somewhere without leaving the web page-->
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () { //not sure, something about running this first?
+                
+                $("button").click(function () { //"Do this when button gets clicked"
+                    $.get("test.txt", function(data, status) { //Retrieves the information in test.txt, function(data, status) tells us the two pieces of info which will be in the body
+                        $("#test").html(data); //This gives the ajax function an id of test. Passes test.txt as the data, so now the text.txt doc can be refferred to as #test
+                        alert(status); //produces an alert on the screen which says success or failure when the function is called.
+                    })
+                });
+            });
+        </script>
+    </head>
+    
+    <body>
+        <button>Click me to get data!</button> 
+        <p id="test"></p> <!--The ID test is in the ajax function. When pressed this performs the ajax function/ -->
+    </body>
+    
+</html>

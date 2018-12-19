@@ -65,6 +65,10 @@
     Final Project
 </a> <br>
 
+<a href="./practice/practicefinaljason/practice/index.html">
+    Practice Final
+</a> <br>
+
 <a href="./proseminar/eportfolio/aboutme.html">
     Major Proseminar Eportfolio 
 </a> <br>

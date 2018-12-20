@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <link rel="stylesheet" type="text/css" href="racing.css">
+</head>
+
+<body>
+    <div>
+
+<!--<?php include "navigation.php" ?> ;-->
+<a href="login.php">Login</a></li>
+<a href="logout.php">Logout</a></li>
+    </div>
+    <!--Search bar-->
+    <div>
+
+<input type="text" placeholder="Search..">
+<button type="submit">Submit</button>
+    </div>
+
+    <!--Pages-->
+    <div id="pages">
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>Location</th>
+                <th>Past Races</th>
+                <th>
+                    <button class="add action">
+                        <img src="img/racing-add.png" />
+                    </button>
+                </th>
+                
+                <th>
+                    <button class="cancel action">
+                        <img src="img/racing-cancel.png" />
+                    </button>
+                </th>
+                <th>
+                    <button class="edit action">
+                        <img src="img/racing-edit.png" />
+                    </button>
+                </th>
+                <th>
+                    <button class="eye action">
+                        <img src="img/racing-eye.png" />
+                    </button>
+                </th>
+                
+                
+            </thead>
+            <tbody>
+                <!--Put all the pages data here-->
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--Add Racer Modal-->
+    <div id="modalBox" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div>
+                <h1>Racer Details </h1>
+                <label for="Race">Race</label>
+                <select>
+                    <option value="0">Race ID</option>
+                    <option value="1">On Hold</option>
+                    <option value="2">Active</option>
+                </select>
+            </div>
+            <div>
+                <label for="code">Code Name</label>
+                <input id="code" type="text" />
+            </div>
+            <!--<div>-->
+            <!--    <label for="statusId">Status</label>-->
+            <!--    <select>-->
+            <!--        <option value="0">Archived</option>-->
+            <!--        <option value="1">On Hold</option>-->
+            <!--        <option value="2">Active</option>-->
+            <!--    </select>-->
+            <!--    <label for="typeId">Type</label>-->
+            <!--    <select>-->
+            <!--        <option value="">---Please Select One---</option>-->
+            <!--        <option value="0">Standard</option>-->
+            <!--        <option value="1">On Hold</option>-->
+            <!--        <option value="2">Active</option>-->
+            <!--    </select>-->
+            <!--</div>-->
+            <div>
+                <label for="title">Year</label>
+                <select>
+                    <option value="0">2018</option>
+                    <option value="1">2017</option>
+                    <option value="2">2016</option>
+                    <option value="3">2015</option>
+                    <option value="4">2014</option>
+                    <option value="5">2013</option>
+                    <option value="6">2012</option>
+                    <option value="7">2011</option>
+                    <option value="8">Old</option>
+                </select>
+            </div>
+            <div>
+                <label for="slogan">Make</label>
+                <select>
+                    <option value="0">of Car to Race</option>
+                    <option value="1">Porche</option>
+                    <option value="2">Ferrari</option>
+                    <option value="3">Lambo</option>
+                    <option value="4">Not a Porche</option>
+                    <option value="5">Not a Ferrari</option>
+                    <option value="6">Not a Lambo</option>
+                </select>
+            </div>
+            <div>
+                <label for="action">Model</label>
+                <select>
+                    <option value="0">Based on Make/Year</option>
+                    <option value="1">On Hold</option>
+                    <option value="2">Active</option>
+                </select>
+            </div>
+            <div>
+                <span>Comments</label>
+                <textarea id="description" rows="5"></textarea>
+            </div>
+
+            <div>
+                <button class="save">Save</button>
+            </div>
+            
+            <div>
+                <button class="cancel">Cancel</button>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <!--Cancel Modal-->
+    <div id="modalBox" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div>
+                <h1>Racer Details </h1>
+                <label for="Race">Race</label>
+                <select>
+                    <option value="0">Race ID</option>
+                    <option value="1">On Hold</option>
+                    <option value="2">Active</option>
+                </select>
+            </div>
+            <div>
+                <label for="code">Code Name</label>
+                <input id="code" type="text" />
+            </div>
+            <!--<div>-->
+            <!--    <label for="statusId">Status</label>-->
+            <!--    <select>-->
+            <!--        <option value="0">Archived</option>-->
+            <!--        <option value="1">On Hold</option>-->
+            <!--        <option value="2">Active</option>-->
+            <!--    </select>-->
+            <!--    <label for="typeId">Type</label>-->
+            <!--    <select>-->
+            <!--        <option value="">---Please Select One---</option>-->
+            <!--        <option value="0">Standard</option>-->
+            <!--        <option value="1">On Hold</option>-->
+            <!--        <option value="2">Active</option>-->
+            <!--    </select>-->
+            <!--</div>-->
+            <div>
+                <label for="title">Year</label>
+                <select>
+                    <option value="0">2018</option>
+                    <option value="1">2017</option>
+                    <option value="2">2016</option>
+                    <option value="3">2015</option>
+                    <option value="4">2014</option>
+                    <option value="5">2013</option>
+                    <option value="6">2012</option>
+                    <option value="7">2011</option>
+                    <option value="8">Old</option>
+                </select>
+            </div>
+            <div>
+                <label for="slogan">Make</label>
+                <select>
+                    <option value="0">of Car to Race</option>
+                    <option value="1">Porche</option>
+                    <option value="2">Ferrari</option>
+                    <option value="3">Lambo</option>
+                    <option value="4">Not a Porche</option>
+                    <option value="5">Not a Ferrari</option>
+                    <option value="6">Not a Lambo</option>
+                </select>
+            </div>
+            <div>
+                <label for="action">Model</label>
+                <select>
+                    <option value="0">Based on Make/Year</option>
+                    <option value="1">On Hold</option>
+                    <option value="2">Active</option>
+                </select>
+            </div>
+            <div>
+                <span>Comments</label>
+                <textarea id="description" rows="5"></textarea>
+            </div>
+
+            <div>
+                <button class="save">Save</button>
+            </div>
+            
+            <div>
+                <button class="cancel">Cancel</button>
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+    
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="racing.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">#</th>
+<th style="text-align:left">Task Description</th>
+<th style="text-align:left">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="color:green;">You provide a ERD diagram representing the data and its relationships, with at least one transactional and one code table. This may be included in Cloud9 as a picture or from a designer tool</td>
+<td style="text-align:left">15</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="color:green;">Tables in MySQL match the ERD and support the requirements of the application</td>
+<td style="text-align:left">25</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="color:red;">The list of races is pulled from MySQL using AJAX and the API endpoint, and displayed using the specified page design</td>
+<td style="text-align:left">35</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="color:red;">Canceled races do not show up in the Dashboard list</td>
+<td style="text-align:left">5</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="color:red;">Old races do not show up in the Dashboard list</td>
+<td style="text-align:left">5</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="color:red;">A user can add a race to the MySQL using the API endpoint and displayed using the specified modal design</td>
+<td style="text-align:left">15</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">TOTAL</td>
+<td style="text-align:left">100</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="color:green;">This rubric is properly included AND UPDATED (BONUS)</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">Add a report that shows the number of racers and number of different cars for each race</td>
+<td style="text-align:left">15</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">A user can cancel a race in MySQL using the API endpoint</td>
+<td style="text-align:left">15</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">The user confirms the cancelation using the specified modal design</td>
+<td style="text-align:left">10</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:green;">The app is deployed to Heroku</td>
+<td style="text-align:left">10</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">A car image can be uploaded and displayed</td>
+<td style="text-align:left">20</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:green;">Racers can signup for a race</td>
+<td style="text-align:left">20</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">When racers signup, they can pick the make, model and year of their car using the API. <i>This does not require adding the race...just integrating the API on the modal.</i></td>
+<td style="text-align:left">35</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">The race page shows the list of all racers who have signed up for the race, and the admin can open the race from the dashboard</td>
+<td style="text-align:left">25</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">The race page is password protected</td>
+<td style="text-align:left">10</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">Admins can see all the past races</td>
+<td style="text-align:left">20</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">Users can filter records based on text that is showing</td>
+<td style="text-align:left">15</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">Login works with a User table and BCrypt</td>
+<td style="text-align:left">20</td>
+</tr>
+<tr>
+<td style="text-align:left">BD</td>
+<td style="color:red;">Google Maps shows the location of the race</td>
+<td style="text-align:left">5</td>
+</tr>
+</tbody>
+</table>

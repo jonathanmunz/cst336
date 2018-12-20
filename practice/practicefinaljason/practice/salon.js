@@ -24,7 +24,7 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "index.php",
+            url: "insertIntoDB.php",
             dataType: "json",
             contentType: "application/json",
             data: JSON.stringify(pageData),
@@ -45,7 +45,7 @@ $(function() {
     var pagesData;
 
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "index.php",
         dataType: "json",
         success: function(data, status) {

@@ -69,7 +69,7 @@
     Practice Final
 </a> <br>
 
-<a href="./exams/Final/index.html">
+<a href="https://cst336finalexam2018.herokuapp.com/exams/Final/index.html">
     Final Exam
 </a> <br>
 

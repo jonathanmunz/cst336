@@ -45,7 +45,7 @@ function validate($username, $password) {
             }
         ?>
 
-        <form method="POST" action="index.html">
+        <form method="POST" action="index.html" >
             Username: <input type="text" name="username"></input> <br/>
             Password: <input type="password" name="password"></input> <br/>
             <input type="submit" value="Login">

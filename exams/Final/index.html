@@ -31,7 +31,7 @@
                 <th>Location</th>
                 <th>Past Races</th>
                 <th>
-                    <button class="add action">
+                    <button class="add action"> 
                         <img src="img/racing-add.png" />
                     </button>
                 </th>
@@ -155,78 +155,17 @@
             <span class="close">&times;</span>
 
             <div>
-                <h1>Racer Details </h1>
-                <label for="Race">Race</label>
-                <select>
-                    <option value="0">Race ID</option>
-                    <option value="1">On Hold</option>
-                    <option value="2">Active</option>
-                </select>
-            </div>
-            <div>
-                <label for="code">Code Name</label>
-                <input id="code" type="text" />
-            </div>
-            <!--<div>-->
-            <!--    <label for="statusId">Status</label>-->
-            <!--    <select>-->
-            <!--        <option value="0">Archived</option>-->
-            <!--        <option value="1">On Hold</option>-->
-            <!--        <option value="2">Active</option>-->
-            <!--    </select>-->
-            <!--    <label for="typeId">Type</label>-->
-            <!--    <select>-->
-            <!--        <option value="">---Please Select One---</option>-->
-            <!--        <option value="0">Standard</option>-->
-            <!--        <option value="1">On Hold</option>-->
-            <!--        <option value="2">Active</option>-->
-            <!--    </select>-->
-            <!--</div>-->
-            <div>
-                <label for="title">Year</label>
-                <select>
-                    <option value="0">2018</option>
-                    <option value="1">2017</option>
-                    <option value="2">2016</option>
-                    <option value="3">2015</option>
-                    <option value="4">2014</option>
-                    <option value="5">2013</option>
-                    <option value="6">2012</option>
-                    <option value="7">2011</option>
-                    <option value="8">Old</option>
-                </select>
-            </div>
-            <div>
-                <label for="slogan">Make</label>
-                <select>
-                    <option value="0">of Car to Race</option>
-                    <option value="1">Porche</option>
-                    <option value="2">Ferrari</option>
-                    <option value="3">Lambo</option>
-                    <option value="4">Not a Porche</option>
-                    <option value="5">Not a Ferrari</option>
-                    <option value="6">Not a Lambo</option>
-                </select>
-            </div>
-            <div>
-                <label for="action">Model</label>
-                <select>
-                    <option value="0">Based on Make/Year</option>
-                    <option value="1">On Hold</option>
-                    <option value="2">Active</option>
-                </select>
-            </div>
-            <div>
-                <span>Comments</label>
-                <textarea id="description" rows="5"></textarea>
+                <h1>Cancel? </h1>
+                <label for="Race">Race ID</label>
+                (Id for the Race)
             </div>
 
             <div>
-                <button class="save">Save</button>
+                <button class="save">Yes, Cancel It!</button>
             </div>
             
             <div>
-                <button class="cancel">Cancel</button>
+                <button class="cancel">Don't</button>
             </div>
 
         </div>
@@ -346,7 +285,7 @@
 </tr>
 <tr>
 <td style="text-align:left">BD</td>
-<td style="color:red;">The user confirms the cancelation using the specified modal design</td>
+<td style="color:yellow;">The user confirms the cancelation using the specified modal design</td>
 <td style="text-align:left">10</td>
 </tr>
 <tr>
@@ -391,13 +330,18 @@
 </tr>
 <tr>
 <td style="text-align:left">BD</td>
-<td style="color:red;">Login works with a User table and BCrypt</td>
+<td style="color:yellow;">Login works with a User table and BCrypt. </td> 
 <td style="text-align:left">20</td>
 </tr>
 <tr>
 <td style="text-align:left">BD</td>
 <td style="color:red;">Google Maps shows the location of the race</td>
 <td style="text-align:left">5</td>
+</tr>
+<tr>
+<td style="text-align:left">Comments:</td>
+<td style="color:blue;">For the login I added a username and password to the database but it either would never allow a login </td>
+<td style="text-align:left"></td>
 </tr>
 </tbody>
 </table>
